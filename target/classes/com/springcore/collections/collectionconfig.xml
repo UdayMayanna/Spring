@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+   <bean class="com.springcore.collections.Employees" name="employee1">
+       <property name="employeeName" value="Uday"></property>
+       <property name="employeeCity" value="Kolhapur"></property>
+       <property name="employeePhones">
+         <list>
+             <value>7685748587</value>
+             <value>9685368568</value>
+             <value>8684368568</value>
+         </list>
+       </property>
+       <property name="employeeAddresses">
+           <set>
+               <value>Kolhapur</value>
+               <value>Sangli</value>
+               <value>Ichalkarnji</value>
+           </set>
+       </property>
+       <property name="employeeCourses">
+           <map>
+               <entry key="1" value="Java" />
+               <entry key="2" value="Spring" />
+               <entry key="3" value="Angular" />
+           </map>
+       </property>
+       <property name="properties">
+            <props>
+              <prop key="url">https://localhost/uday.com</prop>
+              <prop key="timeout">4000</prop>
+              <prop key="retries">3</prop>
+            </props>
+       </property>
+   </bean>
+</beans> 
