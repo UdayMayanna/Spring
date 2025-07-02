@@ -7,7 +7,6 @@ public class Car {
 
    public Car() {
 	super();
-	// TODO Auto-generated constructor stub
 }
 
 public Car(String carName, int carModalYear, String carColor) {
