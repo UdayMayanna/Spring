@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+      <bean class="com.springcore.constructorDI.Customer" name="customer1">
+            <constructor-arg value="Uday Mayanna" />
+            <constructor-arg value="1232" type="int"/>
+            <constructor-arg value="Kolhapur"/>
+      </bean>
+      <bean class="com.springcore.constructorDI.Customer" name="customer2">
+            <constructor-arg value="Shubham Bhadarge" />
+            <constructor-arg value="1233" type="int"/>
+            <constructor-arg value="Gadhinglaj"/>
+      </bean>
+      <bean class="com.springcore.constructorDI.Customer" name="customer3">
+            <constructor-arg value="Bhavesh Kumbhar" />
+            <constructor-arg value="1234" type="int"/>
+            <constructor-arg value="Satara"/>
+      </bean>
+      <bean class="com.springcore.constructorDI.Customer" name="customer4">
+            <constructor-arg value="Suraj Barge" />
+            <constructor-arg value="1235" type="int"/>
+            <constructor-arg value="Jysingpaur"/>
+      </bean>
+      
+      <bean class="com.springcore.constructorDI.Store" name="store1">
+          <constructor-arg value="12" type="int"/>
+          <constructor-arg value="Zudio"/>
+          <constructor-arg value="Sangli"/>
+          <constructor-arg>
+              <list>
+                  <ref bean="customer1"></ref>
+                  <ref bean="customer2"></ref>
+                  <ref bean="customer3"></ref>
+                  <ref bean="customer4"></ref>
+              </list>
+          </constructor-arg>
+      </bean>
+</beans> 
