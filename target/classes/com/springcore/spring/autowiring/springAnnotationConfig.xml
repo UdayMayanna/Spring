@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+  <!-- Autowirnig byName --> 
+   <bean class="com.springcore.spring.autowiring.Address" name="emplyeeAddress">
+      <property name="addressCity" value="Kolhapur"/>
+      <property name="addressState" value="Maharastra"/>
+   </bean>    
+   
+   <bean class="com.springcore.spring.autowiring.Employee" name="employee1" autowire="byName">
+      <property name="employeeId" value="1"/>
+      <property name="employeeName" value="Uday"/>
+   </bean>
+   
+   
+    <!-- Autowirnig byType --> 
+    
+    <bean class="com.springcore.spring.autowiring.Course" name="course">
+        <property name="courseName" value="Spring"/>
+        <property name="courseId" value="2"/>
+    </bean>
+    <bean class="com.springcore.spring.autowiring.Student" name="student" autowire="byType"/>
+    
+    <!-- Using Constructor -->
+    <!--  <bean class="com.springcore.spring.autowiring.Student" name="student" autowire="constructor"/>-->
+</beans> 
