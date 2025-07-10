@@ -9,6 +9,8 @@
   http://www.springframework.org/schema/context 
   https://www.springframework.org/schema/context/spring-context.xsd">
 
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
     <bean class="com.springcore.springlifecycle.Laptop" name="laptop1">
         <property name="laptopBrand" value="HP"/>
         <property name="laptopRAM" value="8"/>
