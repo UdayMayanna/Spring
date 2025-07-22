@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+   <context:component-scan base-package="com.springcore.spring.qualifierAnnotation" />
+
+    <bean class="com.springcore.spring.qualifierAnnotation.Course" 
+    p:courseId="1" p:courseName="Java" name="course1"/>
+
+    <bean class="com.springcore.spring.qualifierAnnotation.Course" 
+    p:courseId="2" p:courseName="Hibernate" name="course2"/>
+
+    <bean class="com.springcore.spring.qualifierAnnotation.Student"
+     name="student1" p:studentId="12" p:studentName="Uday"/>
+     
+</beans>
