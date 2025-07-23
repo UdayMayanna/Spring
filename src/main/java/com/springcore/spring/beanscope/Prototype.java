@@ -9,4 +9,7 @@ import org.springframework.stereotype.Component;
 public class Prototype {
     @Value("Mayanna")
     private String name;
+    
+    @Value("12")
+    private int id;
 }
